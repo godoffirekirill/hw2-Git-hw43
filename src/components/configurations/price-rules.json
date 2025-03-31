@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "default": {
+      "minCost": 1,
+      "maxCost": 1000,
+      "errorMessage": "Cost must be between {minCost} and {maxCost}. Press ESC to revert."
+    },
+    "bread": {
+      "minCost": 2,
+      "maxCost": 50,
+      "errorMessage": "Bread cost must be between {minCost} and {maxCost}. Press ESC to revert."
+    }
+  }
+}
