@@ -1,0 +1,17 @@
+.nav-list{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 1.2rem;
+}
+.nav-item{
+    margin-right: 3rem;
+}
+.active{
+    color: orange;
+    font-size: 1.3rem;
+}
+.sub-list{
+    flex-direction: column;
+    align-items: start;
+}
