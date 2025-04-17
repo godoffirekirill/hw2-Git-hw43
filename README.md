@@ -1,50 +1,75 @@
-# React + TypeScript + Vite
+# 🛒 CW40: Firebase-магазин с ролями и админкой
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 👤 Пользовательская и 🔐 Админская панель, управление товарами, корзина, авторизация — всё на **React + Firebase + MUI**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Описание проекта
 
-## Expanding the ESLint configuration
+Магазин с полноценной ролевой системой:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Пользователи** могут:
+  - Зарегистрироваться и войти
+  - Просматривать товары
+  - Добавлять их в корзину
+  - Работать с фильтрацией и выбором характеристик
 
-- Configure the top-level `parserOptions` property like this:
+- **Администраторы** могут:
+  - Входить в административную панель
+  - Редактировать характеристики товаров
+  - Управлять базой данных в реальном времени
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Все данные хранятся и синхронизируются с **Firebase Realtime Database**.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 🧩 Технологии и стек
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+| Технология        | Использование                        |
+|-------------------|--------------------------------------|
+| React             | Основной фреймворк                  |
+| Vite              | Сборка и запуск проекта             |
+| MUI               | UI-компоненты                       |
+| Firebase          | База данных, авторизация            |
+| Redux Toolkit     | Состояние приложения                |
+| React Router DOM  | Навигация                           |
+| Jest              | Юнит-тестирование                   |
+| RxJS / rxfire     | Реактивная работа с Firebase        |
+| TypeScript        | Типизация                           |
+
+---
+
+## 🔐 Авторизация и роли
+
+- **Firebase Auth** используется для регистрации и входа
+- Пользователь получает роль (`user` или `admin`)
+- Разграниченный доступ по ролям:
+  - `/admin` — только для админов
+  - `/shop` и `/cart` — для всех авторизованных пользователей
+
+---
+
+## 🛍️ Возможности магазина
+
+### 👥 Пользовательская часть
+
+- Регистрация / Вход
+- Просмотр каталога
+- Добавление товаров в корзину
+- Выбор характеристик товара (варианты, параметры и пр.)
+- Данные сохраняются в Firebase (user-specific)
+
+### 🧰 Админ-панель
+
+- Таблица продуктов с возможностью:
+  - Добавления/удаления
+  - Редактирования характеристик
+  - Прямой работы с Firebase через UI
+- Используется компонент `MUI X DataGrid`
+
+---
+
+## 🖼 Скриншоты
+
+
+
