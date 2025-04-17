@@ -70,6 +70,9 @@
 ---
 
 ## 🖼 Скриншоты
-
+![](https://github.com/godoffirekirill/hw2-Git-hw43/blob/main/screenshots/Screenshot%202025-04-17%20at%2011.10.15.png?raw=true)
+![](https://github.com/godoffirekirill/hw2-Git-hw43/blob/main/screenshots/Screenshot%202025-04-17%20at%2011.10.55.png?raw=true)
+![](https://github.com/godoffirekirill/hw2-Git-hw43/blob/main/screenshots/Screenshot%202025-04-17%20at%2011.11.06.png?raw=true)
+![](https://github.com/godoffirekirill/hw2-Git-hw43/blob/main/screenshots/Screenshot%202025-04-17%20at%2011.11.45.png?raw=true)
 
 
